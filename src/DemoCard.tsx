@@ -1,6 +1,19 @@
-import { Card, Image, Text, CardBody, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from "@chakra-ui/react";
+import { Card, Image, Text, CardBody, Stack, Heading, Divider, CardFooter, ButtonGroup, Button, useToast } from "@chakra-ui/react";
 
 export function DemoCard() {
+    const toast = useToast();
+    function handleAddToCart() {
+
+
+        toast({
+            title: 'Added to cart.',
+            description: "You probably don't need this.",
+            status: 'success',
+            duration: 4000,
+            isClosable: true,
+        })
+    }
+
     return (<Card maxW='sm'>
         <CardBody>
             <Image
@@ -26,7 +39,7 @@ export function DemoCard() {
                 <Button variant='solid' colorScheme='blue'>
                     Buy now
                 </Button>
-                <Button variant='ghost' colorScheme='blue'>
+                <Button variant='ghost' colorScheme='blue' onClick={handleAddToCart}>
                     Add to cart
                 </Button>
             </ButtonGroup>
