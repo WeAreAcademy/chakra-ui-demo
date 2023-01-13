@@ -1,9 +1,10 @@
-import React from 'react';
-import './App.css';
+
 
 function App() {
+
+
   return (
-    <div>Hi!</div>
+    <div>Hello let's look at chakra-ui</div>
   );
 }
 
