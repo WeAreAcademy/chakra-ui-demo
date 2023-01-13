@@ -2,7 +2,7 @@ function App() {
 
 
   return (
-    <div>Hello let's look at chakra-ui</div>
+    <div>Let's look at chakra-ui</div>
   );
 }
 
